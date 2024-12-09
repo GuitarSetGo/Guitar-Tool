@@ -25,7 +25,7 @@ Para instalar y utilizar esta aplicación en tu máquina local, sigue estos paso
 
 La herramienta ya ha sido desplegada en GitHub Pages. Puedes acceder a ella utilizando el siguiente enlace:
 
-[Guitar Tools en GitHub Pages](https://dashblaze.github.io/Guitar-Tool/)
+[Guitar Tools en GitHub Pages](https://guitarsetgo.github.io/Guitar-Tool/)
 
 ## Uso
 
