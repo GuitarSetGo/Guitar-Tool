@@ -7,7 +7,8 @@
     <meta name="keywords" content="guitar, scales, fretboard, music theory, scale generator">
     <meta name="author" content="Joshua Gonzalez">
     <title>Scale Generator — Guitar Tool</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Vinculamos la hoja de estilos aquí -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -18,6 +19,7 @@
 
 <div class="main-wrapper">
 
+    <!-- Controls Card -->
     <div class="card">
         <div class="controls">
             <div class="control-group">
@@ -95,11 +97,13 @@
             <button class="btn-generate" onclick="generateScale()">Generate Scale</button>
         </div>
 
+        <!-- Scale notes pills -->
         <div class="scale-info-bar" id="scaleInfoBar">
             <span class="placeholder" style="padding:6px 0;font-size:11px;">Select a scale and key above</span>
         </div>
     </div>
 
+    <!-- Fretboard Card -->
     <div class="card">
         <div class="scale-name-display" id="scaleNameDisplay" style="display:none;">
             <div class="scale-full-name" id="scaleFullName"></div>
@@ -130,6 +134,7 @@
 
 <div class="toast" id="toast"></div>
 
+<!-- Vinculamos el script aquí -->
 <script src="script.js"></script>
 </body>
 </html>
