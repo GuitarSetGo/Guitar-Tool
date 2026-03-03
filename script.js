@@ -14,11 +14,11 @@ const scalePatterns = {
     locrian:           [1,2,2,1,2,2,2],
     pentatonic_major:  [2,2,3,2,3],
     pentatonic_minor:  [3,2,2,3,2],
-    blues:              [3,2,1,1,3,2],
-    hirajoshi:          [2,1,4,1,4],
-    kumoi:              [2,1,4,2,3],
+    blues:             [3,2,1,1,3,2],
+    hirajoshi:         [2,1,4,1,4],
+    kumoi:             [2,1,4,2,3],
     japanese_insen:    [1,4,2,1,4],
-    melodic_minor:      [2,1,2,2,2,2,1],
+    melodic_minor:     [2,1,2,2,2,2,1],
     harmonic_major:    [2,2,1,2,1,3,1],
     harmonic_minor:    [2,1,2,2,1,3,1],
     hungarian_major:   [3,1,2,1,2,1,2],
@@ -30,19 +30,19 @@ const scalePatterns = {
     bebop_dominant:    [2,2,1,2,2,1,1,1],
     bebop_locrian:     [2,1,2,1,2,2,1,1],
     bebop_dorian:      [2,1,2,2,2,1,1,1],
-    enigmatic:          [1,3,2,2,2,1,1],
+    enigmatic:         [1,3,2,2,2,1,1],
     enigmatic_minor:   [1,2,3,1,3,1,1],
-    persian:            [1,3,1,1,2,3,1],
+    persian:           [1,3,1,1,2,3,1],
     whole_tone:        [2,2,2,2,2,2],
     ionian_flat5:      [2,2,1,1,3,2,1],
-    locrian_7:          [1,2,2,1,2,3,1],
-    pelog:              [1,2,4,1,4],
+    locrian_7:         [1,2,2,1,2,3,1],
+    pelog:             [1,2,4,1,4],
     dominant_sus:      [2,3,2,2,1,2],
     composite_ii:      [1,3,2,1,1,3,1],
     eight_tone_spanish:[1,2,1,1,1,2,2,2],
-    augmented:          [3,1,3,1,3,1],
-    diminished:         [2,1,2,1,2,1,2,1],
-    hindu:              [2,2,1,2,1,2,2],
+    augmented:         [3,1,3,1,3,1],
+    diminished:        [2,1,2,1,2,1,2,1],
+    hindu:             [2,2,1,2,1,2,2],
 };
 
 const scaleNames = {
@@ -95,8 +95,10 @@ function generateScale() {
         scaleNotes.push(notes[currentIndex]);
     });
 
+    // Remove duplicate root at end
     if (scaleNotes[scaleNotes.length - 1] === scaleNotes[0]) scaleNotes.pop();
 
+    // Blue note (blues scale only: the b5)
     let blueNote = null;
     if (scaleKey === 'blues') {
         let bi = startIdx;
@@ -145,7 +147,7 @@ function renderFretboard(scaleNotes, root, blueNote) {
     const mastil = document.createElement('div');
     mastil.id = 'mastil';
 
-    // Fret numbers row
+    // ── Fret numbers row ──
     const numRow = document.createElement('div');
     numRow.className = 'fret-numbers';
     for (let f = 0; f <= FRET_COUNT; f++) {
@@ -156,7 +158,7 @@ function renderFretboard(scaleNotes, root, blueNote) {
     }
     mastil.appendChild(numRow);
 
-    // String rows
+    // ── String rows (high e on top = index 5 first) ──
     for (let s = 5; s >= 0; s--) {
         const stringArr = guitarStrings[s];
         const row = document.createElement('div');
@@ -188,7 +190,7 @@ function renderFretboard(scaleNotes, root, blueNote) {
         mastil.appendChild(row);
     }
 
-    // Inlay row
+    // ── Inlay row ──
     const inlayRow = document.createElement('div');
     inlayRow.className = 'inlay-row';
     for (let f = 0; f <= FRET_COUNT; f++) {
@@ -203,10 +205,7 @@ function renderFretboard(scaleNotes, root, blueNote) {
             } else {
                 const d = document.createElement('div');
                 d.className = 'inlay-dot';
-                d.innerHTML = '';
-                const dot = document.createElement('div');
-                dot.className = 'inlay-dot';
-                cell.appendChild(dot);
+                cell.appendChild(d);
             }
         }
         inlayRow.appendChild(cell);
@@ -232,5 +231,6 @@ function showToast(msg) {
 // ══════════════════════════════════════════════════════════════════
 
 window.onload = () => {
+    // Auto-generate on load with defaults
     generateScale();
 };
