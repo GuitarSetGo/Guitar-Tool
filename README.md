@@ -1,121 +1,60 @@
-# [Guitar-Tool](https://guitarsetgo.github.io/Guitar-Tool/)
+# 🎸 Scale Generator — Interactive Fretboard Visualizer
 
-Bienvenido a la aplicación web "Guitar Tool", una herramienta interactiva diseñada para guitarristas que incluye un generador de escalas, un círculo de quintas y un metrónomo.
-## Estructura del Proyecto
+![Version](https://img.shields.io/badge/version-2.0.0-blueviolet)
+![Scales](https://img.shields.io/badge/scales-40%2B-success)
 
-El proyecto consta de los siguientes archivos principales:
+> **Explore the fretboard like never before with this advanced scale visualization tool.** 🎼🔥
 
-1. **`index.html`**: Estructura HTML de la página web.
-2. **`styles.css`**: Estilos CSS para la apariencia de la página.
-3. **`script.js`**: Funcionalidades interactivas utilizando JavaScript.
+## 📖 Description
 
-## Instalación
+**Scale Generator** is a powerful web application designed to help guitarists visualize scales across the entire fretboard. 
 
-Puedes utilizar esta aplicación de dos formas: localmente o mediante el despliegue en GitHub Pages.
+Unlike simple diagrams, this tool generates dynamic, interactive representations of over **40 different musical scales** in any key. From standard Major/Minor scales to exotic Japanese and Bebop scales, it provides a clear roadmap for improvisation and study.
 
-### Uso Local
+Featuring a modern **Cyber-Metal interface**, it renders a realistic guitar neck with accurate string gauges and fret inlays.
 
-Para instalar y utilizar esta aplicación en tu máquina local, sigue estos pasos:
+## ✨ Key Features
 
-1. Clona el repositorio en tu máquina local.
-2. Asegúrate de tener los archivos `index.html`, `styles.css` y `script.js`.
-3. Abre el archivo `index.html` en tu navegador web preferido.
+*   **📚 Extensive Scale Library:**
+    *   **Greek Modes:** Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian.
+    *   **Pentatonic & Blues:** Major/Minor Pentatonic, Blues Scale (with **Blue Note** highlighting).
+    *   **Exotic Scales:** Hirajoshi, Kumoi, Japanese Insen, Hungarian, Persian, Neapolitan, and more.
+    *   **Jazz/Bebop:** Major/Minor Bebop, Bebop Dominant, Whole Tone, Diminished, Augmented.
+*   **🎸 Realistic Fretboard:**
+    *   **Dynamic Rendering:** Generates the fretboard based on standard tuning (EADGBE).
+    *   **Visual Cues:** Shows fret numbers and standard inlay markers (3, 5, 7, 9, 12...).
+    *   **String Gauges:** Visually distinct string thicknesses for better orientation.
+*   **🧠 Smart Theory Engine:**
+    *   **Interval Display:** Shows the step pattern for each scale.
+    *   **Root Note Highlighting:** The tonic note is clearly marked in a unique color.
+    *   **Blue Note:** Special highlighting for the "Blue Note" (♭5) in Blues scales.
 
-### Uso en GitHub Pages
+## 🛠️ Technologies Used
 
-La herramienta ya ha sido desplegada en GitHub Pages. Puedes acceder a ella utilizando el siguiente enlace:
+*   **HTML5**
+*   **CSS3** (Grid, Flexbox, Gradients)
+*   **JavaScript (ES6+)** (DOM Manipulation, Music Theory Logic)
 
-[Guitar Tools en GitHub Pages](https://guitarsetgo.github.io/Guitar-Tool/)
+## 🎮 How to Use
 
-## Uso
+1.  **Select a Scale:** Choose from the dropdown menu (grouped by category).
+2.  **Select a Key:** Choose the root note (e.g., A, C#, F).
+3.  **Generate:** Click the **"GENERATE SCALE"** button.
+4.  **Explore:**
+    *   **Root Notes:** Marked in **Cyan**.
+    *   **Scale Notes:** Marked in **Purple**.
+    *   **Blue Notes:** Marked in **Blue** (only for Blues scale).
 
-### Generador de Escalas
-![Screenshot 2024-10-11 090131](https://github.com/user-attachments/assets/8715ea11-c43b-42d2-85b1-f4895bfd23c0)
+## 📚 Credits
 
-1. Selecciona una escala en el menú desplegable "Scale".
-2. Selecciona una tonalidad en el menú desplegable "Key".
-3. Haz clic en el botón "Generate Scale" para visualizar la escala generada.
-4. La sección correspondiente mostrará la escala seleccionada en el mástil de la guitarra.
+The scale and mode information was sourced from the book **"The Guitar Grimoire"** by **Adam Kadmon**. This book is an essential reference for guitarists, providing a solid foundation in music theory and a comprehensive guide to exploring new musical territories.
 
-### Círculo de Quintas
-![image](https://github.com/user-attachments/assets/74767507-de98-488d-a307-b20a1e940a5b)
+## 👨‍💻 Author
 
-1. Navega a la pestaña "Circle of Fifths".
-2. Podrás visualizar una imagen del Círculo de Quintas.
+**Joshua Gonzalez**
 
-### Metrónomo
-![Screenshot 2024-10-11 090146](https://github.com/user-attachments/assets/d63da55b-b93b-441b-b348-4176c6300cc3)
-
-1. Navega a la pestaña "Metronome".
-2. Configura el tempo en BPM utilizando el campo numérico.
-3. Haz clic en "Start" para iniciar el metrónomo y "Stop" para detenerlo.
-
-## Lista de Escalas Contenidas
-
-La aplicación incluye una amplia variedad de escalas que los usuarios pueden generar. A continuación se presenta una lista de las escalas disponibles:
-
-### Modos Griegos
-
-- Ionian (Major Scale)
-- Dorian
-- Phrygian
-- Lydian
-- Mixolydian
-- Aeolian (Minor Scale)
-- Locrian
-
-### Escalas Pentatónicas
-
-- Major Pentatonic
-- Minor Pentatonic
-- Blues
-
-### Escalas Japonesas
-
-- Hirajoshi
-- Kumoi
-- Japanese Insen
-
-### Escalas Bebop
-
-- Major Bebop
-- Minor Bebop
-- Bebop Dominant
-- Bebop Locrian ♮2
-- Bebop Dorian
-
-### Escalas Simétricas
-
-- Whole Tone
-- Augmented
-- Diminished
-
-### Otras Escalas
-
-- Harmonic Minor
-- Melodic Minor
-- Harmonic Major
-- Hungarian Minor
-- Hungarian Major
-- Neapolitan Minor
-- Neapolitan Major
-- Enigmatic Minor
-- Enigmatic
-- Composite II
-- Ionian ♭5
-- Locrian ♮7
-- Persian
-- Hindu
-- Pelog
-- Dominant Sus
-- 8-Tone Spanish
-
-## Créditos
-
-La información de las escalas y modos fue extraída del libro **"The Guitar Grimoire"** por **Adam Kadmon**. Este libro es una referencia esencial para guitarristas, proporcionando una base sólida en teoría musical y una guía para explorar nuevas áreas de la música.
-
-Esta aplicación fue creada por **Joshua Gonzalez** como una herramienta didáctica para guitarristas.
+*   [GitHub Profile](https://github.com/GuitarSetGo)
+*   [LinkedIn](https://www.linkedin.com/in/josh4dev)
 
 ---
-
-¡Esperamos que disfrutes utilizando la aplicación Guitar Tool y que te ayude en tu viaje musical con la guitarra!
+*© 2026 - Scale Generator*
