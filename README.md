@@ -1,4 +1,4 @@
-# 🎸 [Scale Generator — Interactive Fretboard Visualizer](https://guitarsetgo.github.io/Scale-Generator)
+# 🎸 [Scale Generator — Interactive Fretboard Visualizer](https://guitarsetgo.github.io/Scale-Generator-V2)
 
 ![Version](https://img.shields.io/badge/version-2.0.0-blueviolet)
 ![Status](https://img.shields.io/badge/status-active-success)
